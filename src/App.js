@@ -1,17 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
 import { Route, Routes } from 'react-router-dom'
 import NewInvoice from './invoices/pages/NewInvoice';
 import Users from './user/pages/Users';
 import AllInvoices from './invoices/pages/AllInvoices';
-import Home from './shared/pages/Home';
 import Login from './shared/pages/Login';
 import Navbar from './shared/navigation/Navbar'
 import { useCallback, useEffect, useState } from 'react';
 import { AuthContext } from './shared/context/auth-context';
 import { Divider } from '@mui/material';
 import Invoice from './invoices/pages/Invoice';
-import Box from '@mui/material/Box';
 
 function App() {
 

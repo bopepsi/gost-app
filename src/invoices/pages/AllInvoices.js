@@ -11,10 +11,8 @@ function AllInvoices() {
     const [invoices, setInvoices] = useState([]);
     const [open, setOpen] = React.useState(false);
 
-    // const [maxPage, setMaxPage] = useState();
-
     const apiUrl = process.env.REACT_APP_API_URL;
-    
+
     const handleOpen = () => {
         setOpen(true);
     };
@@ -39,7 +37,6 @@ function AllInvoices() {
                     })
                 })
                 const responseData = await response.json();
-
                 if (!response.ok) {
                     alert(responseData.message);
                     handleClose();
@@ -49,6 +46,7 @@ function AllInvoices() {
             } catch (err) {
                 alert('Fetching data failed');
                 handleClose();
+                return;
             }
             handleClose();
         })()

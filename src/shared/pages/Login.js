@@ -4,7 +4,7 @@ import { AuthContext } from '../context/auth-context';
 import { Button, Input } from '@mui/material';
 import Box from '@mui/material/Box';
 
-const Login = ({ }) => {
+const Login = () => {
 
     const auth = useContext(AuthContext);
     const [email, setEmail] = useState('');

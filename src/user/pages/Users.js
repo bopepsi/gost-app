@@ -6,6 +6,7 @@ import { AuthContext } from '../../shared/context/auth-context';
 function Users() {
 
     const Auth = useContext(AuthContext);
+    const apiUrl = process.env.REACT_APP_API_URL;
 
     const [users, setUsers] = useState([]);
 
@@ -13,7 +14,7 @@ function Users() {
         (Auth.role) && (async () => {
 
             try {
-                const response = await fetch('http://localhost:5000/api/auth/allusers', {
+                const response = await fetch(apiUrl+'/api/auth/allusers', {
                     method: 'post',
                     headers: {
                         "content-Type": "application/json",
@@ -29,8 +30,6 @@ function Users() {
                     alert(responseData.message);
                     return;
                 }
-                console.log('ALLUSERS...................')
-                console.log(responseData);
                 setUsers(responseData);
             } catch (err) {
                 alert('Login failed');

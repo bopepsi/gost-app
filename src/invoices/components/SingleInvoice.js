@@ -23,9 +23,9 @@ function SingleInvoice(props) {
         </Box>
     );
 
-    const deleteHandler = () => {
-        console.log('DELETING')
-    }
+    // const deleteHandler = () => {
+    //     console.log('DELETING')
+    // }
 
     const inv = props.item;
 
