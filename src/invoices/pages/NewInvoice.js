@@ -99,7 +99,6 @@ const NewInvoice = () => {
     handleOpen();
     e.preventDefault();
 
-    console.log(new Date(service_date_end).toISOString().slice(0, 10))
     try {
       const response = await fetch(apiUrl + '/api/invoices/create', {
         method: 'post',

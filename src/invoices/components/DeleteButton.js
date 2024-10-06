@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../shared/context/auth-context';
 import { useNavigate } from 'react-router-dom';
-import { Box, Button } from '@mui/material';
+import { Button } from '@mui/material';
 
 function DeleteInvoiceButton({ invoiceRef, onDeleteSuccess }) {
     const [isDeleting, setIsDeleting] = useState(false);
@@ -13,8 +13,6 @@ function DeleteInvoiceButton({ invoiceRef, onDeleteSuccess }) {
     const deleteInvoice = async () => {
         const confirmed = window.confirm('Are you sure you want to delete this invoice?');
         if (!confirmed) return;
-
-        console.log(invoiceRef)
 
         setIsDeleting(true); // Set loading state
 

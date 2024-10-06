@@ -4,11 +4,7 @@ import { Backdrop } from '@mui/material';
 import CircularProgress from '@mui/material/CircularProgress';
 import { AuthContext } from '../../shared/context/auth-context';
 import SingleInvoice from '../components/SingleInvoice';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
-import { Box, Button } from '@mui/material';
+import { Box } from '@mui/material';
 
 function Invoice() {
 
@@ -18,8 +14,6 @@ function Invoice() {
     const [inv, setInv] = useState({});
 
     const apiUrl = process.env.REACT_APP_API_URL;
-
-    console.log(auth.role)
 
     const handleOpen = () => {
         setOpen(true);
@@ -31,8 +25,6 @@ function Invoice() {
 
     useEffect(() => {
         auth.role && (async () => {
-            console.log(auth.role)
-            console.log(ref)
             handleOpen();
             try {
                 const response = await fetch(apiUrl + `/api/invoices/${ref}?role=${auth.role}&name=${auth.name}`)
@@ -44,13 +36,11 @@ function Invoice() {
                     handleClose();
                     return;
                 };
-                console.log(responseData);
                 setInv(responseData);
             } catch (err) {
                 alert('Fetching data failed');
                 handleClose();
             }
-            console.log('one invoice');
             handleClose();
         })()
     }, [auth, setInv])

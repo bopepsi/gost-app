@@ -1,4 +1,4 @@
-import { Box, Button } from '@mui/material';
+import { Box } from '@mui/material';
 import React from 'react'
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -28,7 +28,6 @@ function SingleInvoice(props) {
     }
 
     const inv = props.item;
-    console.log(inv);
 
     return (
         <Box  >
