@@ -28,8 +28,8 @@
     "eject": "react-scripts eject"
   },
   "engines": {
-    "node": "16.x",  
-    "npm": "8.x"     
+    "node": "16.x",
+    "npm": "8.x"
   },
   "eslintConfig": {
     "extends": [
@@ -48,5 +48,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "typescript": "^4.9.5"
   }
 }
