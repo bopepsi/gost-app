@@ -16,7 +16,8 @@ function InvoiceRow(row) {
             sx={{ '&:last-child td, &:last-child th': { border: 0 }, m: 1 }}
         >
 
-            <TableCell component="th" scope="row" width={'16%'}>
+            <TableCell align="left" width={'15%'} style={{ overflow: 'auto', whiteSpace: 'nowrap' }}>{row.vendor_name.toUpperCase()}</TableCell>
+            <TableCell component="th" scope="row" width={'15%'}>
                 <Link to={`/invoices/${row.invoice_ref}`}>
                     {row.invoice_ref}
                 </Link>

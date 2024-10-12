@@ -19,6 +19,7 @@ function InvoiceTable(props) {
                 < Table sx={{ minWidth: 350 }} aria-label="simple table">
                     <TableHead>
                         <TableRow>
+                            <TableCell align="left">Vendor</TableCell>
                             <TableCell>Ref</TableCell>
                             <TableCell align="left">Invoice date</TableCell>
                             <TableCell align="left">Service start</TableCell>
@@ -32,6 +33,7 @@ function InvoiceTable(props) {
                     <TableBody>
                         {props.items.map((row) => (
                             <InvoiceRow id={row.id} key={row.ID}
+                                vendor_name={row.vendor_name}
                                 invoice_date={new Date(row.invoice_date).toISOString().slice(0, 10)}
                                 invoice_ref={row.invoice_ref}
                                 service_date_start={new Date(row.service_date_start).toISOString().slice(0, 10)}

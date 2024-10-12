@@ -33,6 +33,11 @@ function SingleInvoice(props) {
         <Box  >
             <Card sx={{ minWidth: 275 }}>
                 <CardContent>
+                    <Typography variant="h6" component="div">
+                        {inv.vendor_name.toUpperCase()}
+                    </Typography>
+                    {/* <br></br> */}
+                    {/* <Divider sx={{ borderColor: '#F5F5F5' }} /> */}
                     <Typography gutterBottom sx={{ color: 'text.secondary', mb: 1, mt: 1 }}>
                         Invoice Date: {new Date(inv.invoice_date).toISOString().slice(0, 10)}
                     </Typography>
