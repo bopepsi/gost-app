@@ -9,7 +9,7 @@ export default function BasicMenu(token, user) {
 
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
-    
+
     const navigate = useNavigate();
 
     const handleClick = (event) => {
@@ -29,6 +29,10 @@ export default function BasicMenu(token, user) {
 
     const addInvoiceClickHandler = () => {
         navigate('/invoices/new');
+    }
+
+    const allVendorsClickHandler = () => {
+        navigate('/admin/vendors')
     }
 
     return (
@@ -52,6 +56,16 @@ export default function BasicMenu(token, user) {
                     display: 'flex',
                     justifyContent: 'center',
                 }}>
+                    {Auth.role === 'admin' && <Button
+                        id="basic-button"
+                        aria-controls={open ? 'basic-menu' : undefined}
+                        aria-haspopup="true"
+                        aria-expanded={open ? 'true' : undefined}
+                        onClick={allVendorsClickHandler}
+                    >
+                        Vendors
+                    </Button>
+                    }
                     {!Auth.isLoggedIn &&
                         <Button
                             id="basic-button"

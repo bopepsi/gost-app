@@ -9,6 +9,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { AuthContext } from './shared/context/auth-context';
 import { Divider } from '@mui/material';
 import Invoice from './invoices/pages/Invoice';
+import VendorInvoices from './invoices/pages/VendorInvoices';
 
 function App() {
 
@@ -52,6 +53,7 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/invoices" element={<AllInvoices />}></Route>
         <Route path="/invoices/:invid" element={<Invoice />}></Route>
+        <Route path="/invoices/vendor/:vendorname" element={<VendorInvoices />}></Route>
         <Route path="/invoices/new" element={<NewInvoice />}></Route>
         <Route path='/admin/vendors' element={<Users />}></Route>
       </Routes>
