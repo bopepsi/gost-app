@@ -33,6 +33,7 @@ function InvoiceTable(props) {
                     <TableBody>
                         {props.items.map((row) => (
                             <InvoiceRow id={row.id} key={row.ID}
+                                inv_id={row.ID}
                                 vendor_name={row.vendor_name}
                                 invoice_date={new Date(row.invoice_date).toISOString().slice(0, 10)}
                                 invoice_ref={row.invoice_ref}

@@ -8,7 +8,7 @@ import { Box } from '@mui/material';
 
 function Invoice() {
 
-    const { ref } = useParams();
+    const { invid } = useParams();
     const auth = useContext(AuthContext);
     const [open, setOpen] = React.useState(false);
     const [inv, setInv] = useState({});
@@ -27,7 +27,7 @@ function Invoice() {
         auth.role && (async () => {
             handleOpen();
             try {
-                const response = await fetch(apiUrl + `/api/invoices/${ref}?role=${auth.role}&name=${auth.name}`)
+                const response = await fetch(apiUrl + `/api/invoices/${invid}?role=${auth.role}&name=${auth.name}`)
                 // const response = await fetch(`http://localhost:5000/api/invoices/${ref}`)
                 const responseData = await response.json();
 

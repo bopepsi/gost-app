@@ -9,7 +9,7 @@ function InvoiceRow(row) {
         style: 'currency',
         currency: 'USD',
     });
-
+    
     return (
         <TableRow
             key={row.id}
@@ -18,7 +18,7 @@ function InvoiceRow(row) {
 
             <TableCell align="left" width={'15%'} style={{ overflow: 'auto', whiteSpace: 'nowrap' }}>{row.vendor_name.toUpperCase()}</TableCell>
             <TableCell component="th" scope="row" width={'15%'}>
-                <Link to={`/invoices/${row.invoice_ref}`}>
+                <Link to={`/invoices/${row.inv_id}`}>
                     {row.invoice_ref}
                 </Link>
             </TableCell>

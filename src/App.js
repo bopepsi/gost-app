@@ -51,7 +51,7 @@ function App() {
         <Route path="/" element={<AllInvoices />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/invoices" element={<AllInvoices />}></Route>
-        <Route path="/invoices/:ref" element={<Invoice />}></Route>
+        <Route path="/invoices/:invid" element={<Invoice />}></Route>
         <Route path="/invoices/new" element={<NewInvoice />}></Route>
         <Route path='/admin/vendors' element={<Users />}></Route>
       </Routes>
