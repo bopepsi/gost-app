@@ -11,11 +11,12 @@ function UserTableRow(row) {
             key={row.id}
             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
         >
-            <Link to={`/invoices/vendor/${row.name}`}>
-                <TableCell component="th" scope="row">
+
+            <TableCell component="th" scope="row">
+                <Link to={`/invoices/vendor/${row.name}`}>
                     {row.name}
-                </TableCell>
-            </Link>
+                </Link>
+            </TableCell>
 
             <TableCell align="left">{row.id}</TableCell>
             <TableCell align="left">{row.username}</TableCell>
