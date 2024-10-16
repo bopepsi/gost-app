@@ -14,7 +14,7 @@ function UserTableRow(row) {
 
             <TableCell component="th" scope="row">
                 <Link to={`/invoices/vendor/${row.name}`}>
-                    {row.name}
+                    {row.name.toUpperCase()}
                 </Link>
             </TableCell>
 

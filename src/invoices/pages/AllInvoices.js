@@ -58,7 +58,7 @@ function AllInvoices() {
             <Divider />
             <Typography variant="h5" component="div"
                 sx={{ color: 'text.secondary', fontSize: 14, mr: 3, mt: 1, display: 'flex', justifyContent: 'flex-end', fontStyle: 'italic' }}>
-                {"latest 20 invoices"}
+                {"Latest 20 invoices"}
             </Typography>
             {/* <FooterPagination /> */}
             {/* <FooterPagination items={maxPage} /> */}
